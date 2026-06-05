@@ -14,6 +14,25 @@ resource "azurerm_firewall_policy_rule_collection_group" "network" {
       source_addresses      = ["*"]
       destination_addresses = ["8.8.8.8", "8.8.4.4"]
       destination_ports     = ["53"]
+
     }
+     #
+    #
+    rule {
+      name                  = "allow-ntp"
+      protocols             = ["UDP"]
+      source_addresses      = ["*"]
+      destination_addresses = ["0.0.0.0/0"]
+      destination_ports     = ["123"]
+    }
+
+    #
+    #
+    rule {
+      name                  = "allow-https"
+      protocols             = ["TCP"]
+      source_addresses      = ["*"]
+      destination_addresses = ["0.0.0.0/0"]
+      destination_ports     = ["443"]
   }
 }
