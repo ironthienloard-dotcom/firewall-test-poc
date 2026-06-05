@@ -16,7 +16,7 @@ resource "azurerm_firewall_policy_rule_collection_group" "network" {
       destination_ports     = ["53"]
 
     }
-     #
+    #
     #
     rule {
       name                  = "allow-ntp"
@@ -34,6 +34,6 @@ resource "azurerm_firewall_policy_rule_collection_group" "network" {
       source_addresses      = ["*"]
       destination_addresses = ["0.0.0.0/0"]
       destination_ports     = ["443"]
+    }
   }
-}
 }
