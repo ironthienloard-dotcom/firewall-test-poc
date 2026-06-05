@@ -36,3 +36,4 @@ resource "azurerm_firewall_policy_rule_collection_group" "network" {
       destination_ports     = ["443"]
   }
 }
+}
