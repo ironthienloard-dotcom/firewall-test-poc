@@ -35,8 +35,8 @@ resource "azurerm_firewall_policy_rule_collection_group" "network" {
       destination_addresses = ["0.0.0.0/0"]
       destination_ports     = ["443"]
     }
-   #
-   #
+    #
+    #
     rule {
       name                  = "Testazureallow"
       protocols             = ["TCP"]
