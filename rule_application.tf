@@ -24,7 +24,8 @@ resource "azurerm_firewall_policy_rule_collection_group" "app" {
 
       destination_fqdns = [
         "www.microsoft.com",
-        "learn.microsoft.com"
+        "learn.microsoft.com",
+        "azure.microsoft.com"
       ]
     }
   }
